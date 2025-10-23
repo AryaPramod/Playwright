@@ -22,7 +22,7 @@ public class LoginTest extends BaseTest {
         String newUserConfirmPassword = Config.readPropertyFileData("newUserConfirmPassword", "config");
         LoginPage loginPage = new LoginPage(page);
         loginPage.login(username, password);
-        page.waitForSelector("text Dashboard");
+        page.waitForSelector("text=Dashboard");
         AdminPage adminPage = new AdminPage(page);
         adminPage.openAdminSection();
         adminPage.clickAddButton();
